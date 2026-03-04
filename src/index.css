@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800 bg-[#FDFDFF];
+    /* モバイルでのバウンススクロールを防止 */
+    overscroll-behavior-y: none;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* カスタムフォントの適用 */
+* {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
